@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace task
+{
+    class EnviromentalCenter
+    {
+        private double Height { get; set; }
+        private int Floors { get; set; }
+        public EnviromentalCenter(double height, int floors)
+        {
+            this.Height = height;
+            this.Floors = floors;
+        }
+
+        public void PlantTrees(string type)
+        {
+            Console.WriteLine("Дерево типа {0} было посажено.", type);
+
+        }
+        public void Print()
+        {
+            Console.WriteLine($"Высота здания: {Height}\nКоличество этажей: {Floors}\n");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            EnviromentalCenter enviromentalCenter = new EnviromentalCenter(30,6);
+            enviromentalCenter.Print();
+            enviromentalCenter.PlantTrees("Дуб");
+        }
+    }
+}
